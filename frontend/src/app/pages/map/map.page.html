@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Flood Risk Map</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-item *ngIf="canUpdateStatus">
+  <ion-label>Filter by Risk Level</ion-label>
+  <ion-select [(ngModel)]="selectedRiskLevel"
+              (ionChange)="filterByRiskZone()">
+    <ion-select-option value="">All</ion-select-option>
+    <ion-select-option value="HIGH">High</ion-select-option>
+    <ion-select-option value="MEDIUM">Medium</ion-select-option>
+    <ion-select-option value="LOW">Low</ion-select-option>
+  </ion-select>
+</ion-item>
+
+
+<ion-content>
+  <div id="map" style="height: 100%;"></div>
+</ion-content>
+
+
+<div *ngIf="showForm" class="incident-form">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Report Flood Incident</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <ion-item>
+        <ion-label>Severity</ion-label>
+        <ion-select [(ngModel)]="severity">
+          <ion-select-option value="1">Low</ion-select-option>
+          <ion-select-option value="2">Moderate</ion-select-option>
+          <ion-select-option value="3">High</ion-select-option>
+          <ion-select-option value="4">Severe</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Description</ion-label>
+        <ion-textarea [(ngModel)]="description"></ion-textarea>
+      </ion-item>
+
+      <ion-button expand="block" (click)="submitIncident()">
+        Submit
+      </ion-button>
+
+      <ion-button expand="block" color="medium" (click)="showForm=false">
+        Cancel
+      </ion-button>
+
+    </ion-card-content>
+  </ion-card>
+</div>

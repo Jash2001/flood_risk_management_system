@@ -1,0 +1,18 @@
+services:
+  backend:
+    extends:
+      file: ./backend/docker-compose.yml
+      service: web
+
+  db:
+    extends:
+      file: ./backend/docker-compose.yml
+      service: db
+
+  ionic-frontend:
+    extends:
+      file: ./frontend/docker-compose.yml
+      service: ionic-frontend
+
+volumes:
+  pgdata:

@@ -1,0 +1,77 @@
+# ==================================================
+# GLOBAL
+# ==================================================
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.swp
+*~
+coverage/
+.history/
+
+# ==================================================
+# FRONTEND (Ionic / Angular / Node)
+# ==================================================
+
+# Node modules
+frontend/node_modules/
+
+# Build output
+frontend/www/
+frontend/dist/
+frontend/.angular/
+frontend/.angular/cache/
+frontend/.ionic/
+frontend/platforms/
+frontend/plugins/
+frontend/coverage/
+frontend/.nx/
+frontend/.nx/cache/
+frontend/out-tsc/
+frontend/tmp/
+frontend/bazel-out/
+
+# Logs
+frontend/npm-debug.log*
+frontend/yarn-error.log*
+
+# IDE (frontend)
+frontend/.vscode/*
+!frontend/.vscode/settings.json
+!frontend/.vscode/tasks.json
+!frontend/.vscode/launch.json
+!frontend/.vscode/extensions.json
+frontend/.idea/
+
+# ==================================================
+# BACKEND (Django / Python)
+# ==================================================
+
+# Python cache
+backend/__pycache__/
+backend/**/*.py[cod]
+backend/**/*.pyo
+backend/**/*.pyd
+
+# Virtual environments
+backend/venv/
+backend/env/
+backend/.venv/
+
+# Django database
+backend/db.sqlite3
+backend/db.sqlite3-journal
+
+# Django media/static collected files
+backend/media/
+backend/staticfiles/
+
+# Local settings
+backend/local_settings.py
+
+# Python build artifacts
+backend/build/
+backend/dist/
+backend/*.egg-info/
+backend/.pytest_cache/

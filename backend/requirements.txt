@@ -1,0 +1,10 @@
+Django>=4.2
+djangorestframework
+djangorestframework-gis
+psycopg2-binary
+django-filter
+django-cors-headers
+Pillow
+django-environ
+gunicorn
+djangorestframework-simplejwt

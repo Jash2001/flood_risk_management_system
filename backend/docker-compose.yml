@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgis/postgis:15-3.4
+    container_name: flood_db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: root@123
+      POSTGRES_DB: flood_management
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  web:
+    build: .
+    container_name: flood_web
+    command: gunicorn backend.wsgi:application --bind 0.0.0.0:8000
+    env_file:
+      - .env
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+
+volumes:
+  pgdata:
