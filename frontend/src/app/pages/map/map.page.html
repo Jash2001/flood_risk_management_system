@@ -12,6 +12,7 @@
   <ion-select [(ngModel)]="selectedRiskLevel"
               (ionChange)="filterByRiskZone()">
     <ion-select-option value="">All</ion-select-option>
+    <ion-select-option value="CRITICAL">Critical</ion-select-option>
     <ion-select-option value="HIGH">High</ion-select-option>
     <ion-select-option value="MEDIUM">Medium</ion-select-option>
     <ion-select-option value="LOW">Low</ion-select-option>

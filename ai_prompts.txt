@@ -1,0 +1,17 @@
+AI prompts that i have used during solution design and development.
+
+1. Designing the GIS-Based Incident Management System:
+
+ How can I design a GIS-based flood risk assessment system that allows field responders to report incidents on a map and command center officials to update status, with role-based access control.
+
+2. Integrating Leaflet.js with Angular/Ionic:
+
+ Give me steps to integrate Leaflet.js with Angular/Ionic to display GeoJSON flood zones with clickable popups and color-coded risk levels.
+
+3. Backend Design for GeoJSON CRUD Operations:
+
+ How can I create a Django REST API to store and retrieve spatial data (GeoJSON) for flood zones and incidents using PostGIS.
+
+4. Dockerizing Frontend and Backend Services:
+
+ I need to dockerize a Django backend with PostGIS and an Angular/Ionic frontend, while allowing single-click run.
