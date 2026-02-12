@@ -102,7 +102,7 @@ Heavy rainfall is forecasted for the upcoming week. Emergency coordinators requi
 * PostgreSQL / PostGIS
 
 ---
-### Step 1 : Install PostgreSQL and PostGIS. For postgres (root user) set password as root@123 during installation. 
+### Step 1 : Install PostgreSQL and PostGIS. For postgres user (root user) which is created during the installation set password as root@123 during installation. Make sure to install PostGIS tool once PostgreSQL installation is completed (It will be prompted automatically). 
 
 ---
 ### Step 2: 
