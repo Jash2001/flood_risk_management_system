@@ -2,6 +2,7 @@ import { Component, AfterViewInit } from '@angular/core';
 import * as L from 'leaflet';
 import { GisService } from '../../services/gis.service';
 import { AuthService } from '../../services/auth.service';
+import { Router } from '@angular/router';
 
 delete (L.Icon.Default.prototype as any)._getIconUrl;
 
@@ -34,7 +35,7 @@ export class MapPage implements AfterViewInit {
   selectedRiskLevel: string = '';
 
 
-  constructor(private gisService: GisService, private authService: AuthService) {}
+  constructor(private gisService: GisService, private authService: AuthService, private router: Router) {}
 
   ngAfterViewInit() {
     this.initMap();
@@ -235,5 +236,9 @@ export class MapPage implements AfterViewInit {
       case 'LOW': return 'yellow';
       default: return 'blue';
     }
+  }
+
+  logout() {
+    this.authService.logout();
   }
 }
